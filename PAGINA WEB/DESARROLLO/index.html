@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Unete a la misión!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="../RECURSOS/FAVICON/FAVICON MINECRAFT.png" type="image/x-icon">
+</head>
+<body>
+    <header id="header" class="header">
+            <a href="#">
+                <img src="../RECURSOS/LOGO/LOGO.png" alt="Logo Minecraft" class="logo">
+            </a>
+            <input type="checkbox" id="menu"/>
+            <label for="menu">
+                <img src="../RECURSOS/MENU/MENU.png" class="menu-icono" alt="Menú">
+            </label>
+            <ul class="menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#mision">Misión</a></li>
+                <li><a href="#coordinates">Coordenadas</a></li>
+            </ul>
+    </header>
+
+    <main class="main">
+
+        <div id="videoModal" class="modal-overlay">
+             <div class="modal-content">
+                <span class="close-btn" onclick="cerrarVideo()">&times;</span>
+                <video id="miVideoAnuncio" src="../RECURSOS/VIDEO/VIDEO MINECRAFT.mp4"  width="100%" controls></video>
+            </div>
+        </div>
+    
+
+        <section id="mision">
+            <h1>¡Únete a la misión!</h1>
+            <p>Prepárate para entrar al mundo, minando recuerdos épicos y construyendo <br>una aventura llena de bloques y diversión</p>
+            <div class="video-content">
+                <video src="../RECURSOS/VIDEO/VIDEO MINECRAFT.mp4" autoplay muted controls></video>
+            </div>
+        </section>
+
+        <section id="coordinates">
+            <h2>Coordenadas de la Misión</h2>
+            <div class="coordinates-content">
+                <div class="card">
+                    <img src="../RECURSOS/GIFS/BRUJULA.gif" alt="Brujula">
+                    <div class="coordinates-txt">
+                        <h3>Lugar</h3>
+                        <p class="description">Calle 00</p>
+                    </div>  
+                </div>
+                <div class="card">
+                    <img src="../RECURSOS/GIFS/LIBRO.gif" alt="Libro">
+                    <div class="coordinates-txt">
+                        <h3>Fecha</h3>
+                        <p class="description">00/00/0000</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="../RECURSOS/GIFS/RELOJ.gif" alt="Reloj">
+                    <div class="coordinates-txt">
+                        <h3>Hora</h3>
+                        <p class="description">00/00</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="congratulations">
+                <h2>¡Felicidades!<br>¡Iker subio al Nivel 6!</h2>  
+        </section>
+    </main>
+                
+    <footer class="footer">
+        <p>Servidor cerrado… ¡gracias por jugar!</p>
+        <p>&copy;Diseñado y desarrollado por Santiago</p>
+    </footer>
+    <script src="script.js"></script
+</body>
+</html>
+    
+        
+
