@@ -1,0 +1,345 @@
+/* PALETA DE COLORES */
+/* #0F0F0F - #262423 - #70BF4B */
+
+@font-face {
+    font-family: 'Minecraftory';
+    src: url(../RECURSOS/FUENTES/MINECRAFTORY.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url(../RECURSOS/FUENTES/MONTSERRAT-LIGHT.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+    background-image: url(../RECURSOS/WALLPAPER/WALLPAPER.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#header {
+    background-color: #262423;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    height: 100px;
+}
+
+#header.scrolled {
+  background-color: rgba(38, 36, 35, 0.95); 
+}
+
+.logo {
+    height: 150px;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li a {
+    margin: 0 15px;
+    font-size: 20px;
+    font-family: 'Montserrat';
+    cursor: pointer;
+    color: white;
+}
+
+.menu li a:hover {
+    color: #70BF4B;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 50px;
+}
+
+label {
+    cursor: pointer;
+    display: none; 
+}
+
+#mision {
+    margin-top: 500px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 20px;
+    box-sizing: border-box;
+    background-color: #0F0F0F;
+}
+
+#mision h1 {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Minecraftory';
+    font-size: 60px;
+    text-transform: uppercase;
+    color: white;
+}
+#mision p {
+    margin-bottom: 100px;
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    color: #70BF4B;
+}
+
+.video-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+video {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    display: block;
+}
+
+#coordinates {
+    width: 100%;
+    padding: 60px 20px;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #0F0F0F;
+}
+
+#coordinates h2 {
+    font-family: 'Minecraftory';
+    font-size: 40px;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 100px;
+}
+ .coordinates-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+ }
+
+.card {
+    background-color: #262423;
+    border-radius: 15px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.card h3 {
+    font-family: 'Minecraftory';
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-family: 'Montserrat';
+    color: white;
+}
+
+#congratulations {
+    margin: 200px auto;
+    width: 100%;
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+#congratulations h2 {
+    font-size: 50px;
+    font-family: 'Minecraftory';
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+.footer {
+    width: 100%;
+    color: white;
+    background-color: #262423;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.footer p {
+    font-family: 'Montserrat';
+    font-size: 15px;
+    margin: 5px 0;
+}
+
+.modal-overlay {
+    display: none; /* Oculto por defecto hasta que JS lo active */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
+    z-index: 9999; /* Asegura que esté encima de cualquier otro elemento */
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    background: #000;
+    max-width: 800px;
+    width: 90%;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+
+    aspect-ratio: 16 / 9; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn {
+    position: absolute;
+    top: -30px;
+    right: 0;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+  }
+
+  video {
+    display: block;
+    max-height: 80vh;
+  }
+
+
+
+
+
+
+@media(max-width:600px) {
+    .menu {
+        padding: 20px;
+        margin: 0;
+    }
+    
+    label {
+        display: initial;
+    }
+
+    .menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #0F0F0F;
+        display: none;
+    }
+
+    .menu li {
+        margin: 0 0 10px 0;
+        width: 100%;
+    }
+
+    #menu:checked ~ .menu {
+        display: initial;
+    }
+
+    #mision h1 {
+        font-size: 50px;
+    }
+
+    #mision p {
+        font-size: 20px;
+    }
+    
+    video {
+        max-width: 90%;
+    }
+
+    .coordinates-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card:hover {
+        transform: none;
+   }
+   #congratulations {
+        
+        margin: 100px auto;
+   }
+
+   #congratulations h2 {
+        font-size: 25px;
+        padding: 0 10px;
+   }
+
+   .footer {
+    padding: 30px 15px;
+   }
+
+   .footer p {
+    font-size: 15px;
+   }
+}
